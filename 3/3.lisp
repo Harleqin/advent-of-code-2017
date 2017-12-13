@@ -18,12 +18,12 @@
                             ((:u :d) (1+ l)))
         :for i := 1 :then (+ i l)
         :when (<= n i)
-          :do (let ((x (case leg
+          :do (let ((x (ccase leg
                          (:r (abs (partway-coordinate n i l)))
                          (:u (1+ (floor l 2)))
                          (:l (abs (1- (partway-coordinate n i l))))
                          (:d (floor l 2))))
-                    (y (case leg
+                    (y (ccase leg
                          ((:r :l) (floor l 2))
                          (:u (abs (partway-coordinate n i l)))
                          (:d (abs (1- (partway-coordinate n i l))))))) 

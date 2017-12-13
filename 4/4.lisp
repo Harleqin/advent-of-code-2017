@@ -1,8 +1,5 @@
 (in-package #:cl-user)
 
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (ql:quickload '(#:split-sequence)))
-
 (defpackage #:aoc-4
   (:use #:cl
         #:split-sequence))
