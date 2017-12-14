@@ -2,6 +2,7 @@
 
 (defsystem #:advent-of-code-2017
   :depends-on (#:alexandria
+               #:cl-arrows
                #:cl-ppcre
                #:split-sequence)
   :components ((:file "1/1")

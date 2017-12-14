@@ -3,7 +3,8 @@
 (defpackage #:aoc-10
   (:use #:cl
         #:alexandria
-        #:split-sequence))
+        #:split-sequence)
+  (:export #:knot-hash))
 
 (in-package #:aoc-10)
 
