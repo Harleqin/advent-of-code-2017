@@ -27,8 +27,8 @@
   (loop :repeat count
         :for a := (funcall gen-a)
         :and b := (funcall gen-b)
-        :count (zerop (logxor (mask-field (byte 16 0) a)
-                              (mask-field (byte 16 0) b)))))
+        :count (= (mask-field (byte 16 0) a)
+                  (mask-field (byte 16 0) b))))
 
 (defun work0 ()
   (let* ((start-values (read-input "input.txt"))
