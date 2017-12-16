@@ -7,7 +7,7 @@
 (in-package #:aoc-15)
 
 (defun read-input (filename)
-  "Returns an alist of name to startvalue."
+  "Returns a plist of name to startvalue."
   (with-open-file (in filename)
     (loop :repeat 2
           :append (register-groups-bind (((lambda (s)
