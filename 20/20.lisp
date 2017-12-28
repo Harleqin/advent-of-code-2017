@@ -168,8 +168,9 @@ for other numbers, returns the square root as a float."
                           (gethash time collisions))
           :for just-destroyed := (-> (mapcan #'rest current-collisions)
                                      (remove-duplicates))
-          :finally (return (- (length particles)
-                              (length destroyed-particles))))))
+          :finally (return (values (- (length particles)
+                                      (length destroyed-particles))
+                                   time)))))
 
 ;;; For checking these calculations, I used the following helpers:
 
