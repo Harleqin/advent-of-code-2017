@@ -87,4 +87,4 @@
          (longest-bridges (loop :for bridge :in sorted
                                 :while (= (bridge-length bridge) longest-length)
                                 :collect bridge)))
-    (first (sort longest-bridges #'> :key #'bridge-weight))))
+    (bridge-weight (first (sort longest-bridges #'> :key #'bridge-weight)))))
